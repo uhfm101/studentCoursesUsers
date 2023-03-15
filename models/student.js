@@ -23,12 +23,13 @@ module.exports = (sequelize, DataTypes) => {
   Student.init({
     first_name: DataTypes.STRING,
     last_name: DataTypes.STRING,
-    grade_level: DataTypes.INTEGER
+    grade_level: DataTypes.INTEGER,
+    user_id: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Student',
     timestamps: false,
-    tableName: 'students'
+    tableName: 'student'
   });
   return Student;
 };
