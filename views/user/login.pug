@@ -12,5 +12,8 @@ block content
                 label(for='password') Password
                 input(id = 'password' name = 'password')
 
+        each message in errorMessages
+            p= message
+
             div.form-input
                 button.button.primary(type='submit') Login

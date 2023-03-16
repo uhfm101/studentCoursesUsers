@@ -9,10 +9,22 @@ html
 
       div.nav-content
         ul
-          li
-            a(href="/courses") Courses
-          li
-            a(href="/students") Students
+          if user
+            li
+              a(href="/courses") Courses
+            li
+              a(href="/students") Students
+            li
+              a(href = '/logout')
+            li
+              p Hello #{user.displayName}
+          else
+            li
+              a(href = '/register-student') Register Student
+            li
+              a(href = '/register-staff') Register Staff
+            li
+              a(href= '/login') Login
       div
     div.container
       div.content-container

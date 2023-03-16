@@ -1,6 +1,6 @@
-extends ../layout
+mixin registerForm(saveUrl, userType)
 
-block content
+
     div.form-container
         form(action='/register-student' method = 'post')
             div.form-input
@@ -26,4 +26,4 @@ block content
                         option(value=grade) #{grade}
 
             div.form-input
-                button.button.primary(type='submit') Save
+                button.button.primary(type='submit') Register
